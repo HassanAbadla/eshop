@@ -2,20 +2,20 @@
 <div  v-if="$store.state.showCart">
       <CartView />
     </div>
-<div @click="$store.state.showCart=false" class="p-28 min-h-screen">
+<div @click="$store.state.showCart=false" class="pt-16 md:p-28 min-h-screen">
     
-    <div @click="back" class=" fixed top-4 left-8 float-left border border-indigo-100 rounded-lg py-2 px-4 text-white z-20 hover:bg-yellow-400  ">
-      <button class="font-semibold">Back</button>
+    <div @click="back" class=" fixed top-4 left-8 px-2 py-1 float-left border border-indigo-100 rounded-lg md:py-2 md:px-4 text-white z-20 hover:bg-yellow-400  ">
+      <button class="text-xs font-normal md:font-semibold">Back</button>
     </div>
    
-    <div @click="$store.state.showCart=false" class="flex ">
-        <div class="w-2/3 ">
+    <div @click="$store.state.showCart=false" class="flex flex-col items-center  md:flex md:flex-row">
+        <div class="w-full p-4 md:w-2/3 ">
 
             <div v-if="$store.state.cart.length">
                 <div v-for="items in $store.state.cart" :key="items.id"
-                class=" flex justify-around rounded-xl m-4 p-2 filter shadow-md" 
+                class="flex flex-col justify-around items-center w-full md:flex md:justify-around rounded-xl md:m-4 p-2 filter shadow-md" 
                 >            
-                    <div class="p-2 border-r w-40 border-indigo-100">
+                    <div class="p-2 border-b md:border-r w-28 md:w-40 border-indigo-100">
                         
                         <img :src= items.items.image class="">
                     </div>
@@ -36,7 +36,7 @@
 
         </div>
 
-        <div class="w-1/3  h-1/2 rounded-xl mt-4 filter shadow-xl">
+        <div class="w-full p-4 md:w-1/3  h-1/2 rounded-xl mt-4 filter shadow-xl">
             <div class="flex justify-center w-full bg-yellow-400 text-white h-12 rounded-t-xl p-2 items-center">
                 <h2 class="font-semibold ">Bill</h2>
             </div>

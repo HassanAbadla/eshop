@@ -1,5 +1,5 @@
 <template>
-  <div class="fixed overflow-y-auto right-0 top-0 bg-white w-1/3 h-screen z-10 filter shadow-2xl">
+  <div class="fixed overflow-y-auto right-0 top-0 bg-white w-11/12 md:w-1/3 h-screen z-10 filter shadow-2xl">
       
       <div class="flex justify-between items-center h-12 border-b bg-gray-800 text-white border-indigo-300 p-2">
           <h1 class="text-left font-bold">Cart Details</h1>
@@ -8,9 +8,9 @@
 
 <!-- Cart View -->
     <div v-for="items in cart" :key="items.id" class="flex justify-around items-center p-2 mt-2 border-b border-indigo-200">
-          <img class="w-16" :src= items.items.image alt="">
+          <img class="w-10 md:w-16" :src= items.items.image alt="">
         <div class="flex flex-col text-left w-5/12">
-            <p class="text-xs break-words font-semibold">{{ items.items.title }}</p>
+            <p class="text-xs break-words font-normal md:font-semibold">{{ items.items.title }}</p>
             <p class="text-xs py-2 text-green-700">$ {{ items.items.price }}</p>
         </div>
         <!-- <div class="border border-indigo-100 rounded-full ">
