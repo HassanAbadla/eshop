@@ -1,12 +1,12 @@
 <template>
   <div @click.self="$store.commit('toggleDetails')" class="backdrop z-30 overflow-auto">
     
-    <div class="w-full md:w-4/5 bg-blue-50 rounded-lg my-8 md:my-12 md:mx-auto p-4 flex flex-col ">
+    <div class="w-full md:w-4/5 bg-gray-50 rounded-lg my-8 md:my-12 md:mx-auto p-4 flex flex-col ">
       <!-- <div class="relative w-full bg-green-300 z-40 top-0 transition ease-in duration-700" v-if="msg">Item added successfuly</div> -->
       
         <XIcon @click="$store.commit('toggleDetails')"  class="w-6 h-6 place-self-end text-purple-500 bg-indigo-100 hover:border-red-800 hover:text-red-800 cursor-pointer border border-indigo-500 rounded-md"/>
       <div class="flex flex-col md:flex md:flex-row md:justify-between items-center ">
-          <div class="w-28 md:w-60 flex  bg-white  ">
+          <div class="w-28 h-28 md:h-auto md:w-60 flex  bg-white  ">
               <img :src= productDetails.image class="object-cover">
           </div>
         
