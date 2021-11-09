@@ -7,7 +7,7 @@
         <XIcon @click="$store.commit('toggleDetails')"  class="w-6 h-6 place-self-end text-purple-500 bg-indigo-100 hover:border-red-800 hover:text-red-800 cursor-pointer border border-indigo-500 rounded-md"/>
       <div class="flex flex-col md:flex md:flex-row md:justify-between items-center ">
           <div class="w-28 h-28 md:h-auto md:w-60 flex  bg-white  ">
-              <img :src= productDetails.image class="object-cover">
+              <img :src= productDetails.image class="">
           </div>
         
           <div class="flex flex-col text-left w-full md:w-2/3 p-4 md:px-6 border-t my-2 md:border-l max-h-full border-blue-100">
