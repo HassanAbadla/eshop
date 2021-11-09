@@ -1,5 +1,5 @@
 <template>
-  <div class=" fixed bg-indigo-900 p-4 min-h-10 w-full justify-center z-10 shadow-lg" >
+  <div class=" fixed bg-blue-900 p-4 min-h-10 w-full justify-center z-10 shadow-lg opacity-90" >
     
     <div class="inline-block w-1/2 ">
     

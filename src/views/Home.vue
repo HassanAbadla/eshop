@@ -3,10 +3,12 @@
       <CartView />
   </div>
 <div @click="$store.state.showCart=false" class="min-h-screen">
-      <div  class="flex justify-center p-6 bg-indigo-100 ">
-        <a @click="$store.state.selected=''" class="h-6 m-4 mt-24 text-xs font-semibold px-2 py-1 bg-gray-50 rounded-full border-2 border-indigo-400 cursor-pointer">All Products</a>
-          <div class="h-6 m-4 cursor-pointer mt-24" v-for="(category, index) in categories" :key='index' >
-              <a @click="filteredCategory(category)" class=" text-xs font-semibold px-2 py-1 bg-gray-50 rounded-full border-2 border-indigo-400">{{category}}</a>
+      <div  class="grid grid-cols-1  items-center md:flex md:justify-center md:p-6 bg-blue-100 ">
+        
+        <a @click="$store.state.selected=''" class=" md:m-4 md:mt-24 mt-20 md:mb-1 mb-2 text-xs font-semibold px-2 py-2 bg-gray-50 rounded-full border-2 border-blue-400 cursor-pointer">All Products</a>
+
+          <div v-for="(category, index) in categories" :key='index' class="md:h-6 md:m-4 cursor-pointer md:mt-24 flex flex-col ">
+              <a @click="filteredCategory(category)" class=" text-xs font-semibold px-2 py-2 mb-2 bg-gray-50 rounded-full border-2 border-blue-400">{{category}}</a>
           </div>
       </div>
       <div>
