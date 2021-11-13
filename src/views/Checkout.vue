@@ -8,19 +8,19 @@
       <button class="text-xs font-normal md:font-semibold">Back</button>
     </div>
    
-    <div @click="$store.state.showCart=false" class="flex flex-col items-center  md:flex md:flex-row">
-        <div class="w-full p-4 md:w-2/3 ">
+    <div @click="$store.state.showCart=false" class="flex flex-col items-center md:grid md:gap-2 md:grid-cols-6">
+        <div class="w-full p-4  md:col-span-4">
 
             <div v-if="$store.state.cart.length">
                 <div v-for="items in $store.state.cart" :key="items.id"
-                class="flex flex-col justify-around items-center w-full md:flex md:justify-around rounded-xl md:m-4 p-2 filter shadow-md" 
+                class="flex flex-col justify-around items-center w-full md:flex md:flex-row md:justify-around rounded-xl md:m-4 p-2 filter shadow-md " 
                 >            
-                    <div class="p-2 border-b md:border-r w-28 md:w-40 border-indigo-100">
+                    <div class="p-2  border-b md:border-r border-indigo-100">
                         
-                        <img :src= items.items.image class="">
+                        <img :src= items.items.image class="w-28 md:w-40">
                     </div>
                     
-                    <div class="p-2 w-2/3">
+                    <div class="p-2 md:w-2/3 ">
                         <h1 class="text-left text-sm font-bold text-indigo-800">{{ items.items.title }}</h1>
                         <p class="pt-6 text-left text-sm  text-indigo-800  ">{{ items.items.description }}</p>
                         <p class="pt-6 text-left text-sm  text-green-600  ">$ {{ items.items.price }}</p>
@@ -36,8 +36,8 @@
 
         </div>
 
-        <div class="w-full p-4 md:w-1/3  h-1/2 rounded-xl mt-4 filter shadow-xl">
-            <div class="flex justify-center w-full bg-yellow-400 text-white h-12 rounded-t-xl p-2 items-center">
+        <div class=" p-4 flex flex-col w-full justify-center rounded-xl mt-4 filter shadow-xl md:col-span-2 my-auto">
+            <div class=" w-full bg-yellow-400 text-white h-12 rounded-t-xl p-2 items-center">
                 <h2 class="font-semibold ">Bill</h2>
             </div>
             <div class="py-2 px-4">
